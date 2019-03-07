@@ -20,6 +20,10 @@ reference equality</p>
 [![Star on GitHub][github-star-badge]][github-star]
 [![Tweet][twitter-badge]][twitter]
 
+> WARNING: Please _only_ use this if you really can't find a way to use
+> `React.useEffect`. There's often a better way to do what you're trying to do
+> than do a deep comparison.
+
 ## The problem
 
 React's built-in `useEffect` hook has a second argument called the "dependencies
