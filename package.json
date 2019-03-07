@@ -2,7 +2,8 @@
   "name": "use-deep-compare-effect",
   "version": "0.0.0-semantically-released",
   "description": "It's react's useEffect hook, except using deep comparison on the inputs, not reference equality",
-  "main": "dist/index.js",
+  "main": "dist/use-deep-compare-effect.cjs.js",
+  "module": "dist/use-deep-compare-effect.esm.js",
   "engines": {
     "node": "> 4",
     "npm": "> 3"
