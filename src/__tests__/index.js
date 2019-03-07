@@ -14,7 +14,7 @@ test('useDeepCompareEffect throws an error if using it with an empty array', () 
   console.error.mockRestore()
 })
 
-test('useDeepCompareEffect throws an error if using it with primitive values', () => {
+test('useDeepCompareEffect throws an error if using it with an array of only primitive values', () => {
   jest.spyOn(console, 'error').mockImplementation(() => {})
   expect(() =>
     renderHook(() => useDeepCompareEffect(() => {}, [true, 1, 'string'])),
