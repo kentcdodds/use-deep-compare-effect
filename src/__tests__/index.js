@@ -79,7 +79,7 @@ test('useDeepCompareEffect handles changing values as expected', () => {
 // this may be useful in the future, but we don't support it today so I thought
 // it'd be good to include as a test as it would be a breaking change if we
 // did add support. I'm inclined to not support this. Manipulation is not good.
-test('useDeepComparEffect does NOT work with manipulation', () => {
+test('useDeepCompareEffect does NOT work with manipulation', () => {
   const callback = jest.fn()
   const deps = [{a: 'b'}]
   const {rerender} = renderHook(() => useDeepCompareEffect(callback, deps))
@@ -91,7 +91,7 @@ test('useDeepComparEffect does NOT work with manipulation', () => {
   expect(callback).toHaveBeenCalledTimes(0)
 })
 
-test('useDeepComparEffect works with deep object similarities/differences', () => {
+test('useDeepCompareEffect works with deep object similarities/differences', () => {
   const callback = jest.fn()
   let deps = [{a: {b: {c: 'd'}}}]
   const {rerender} = renderHook(() => useDeepCompareEffect(callback, deps))
