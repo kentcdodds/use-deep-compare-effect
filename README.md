@@ -1,5 +1,5 @@
 <div align="center">
-<h1>use-deep-compare-effect</h1>
+<h1>use-deep-compare-effect 🐋</h1>
 
 <p>It's react's useEffect hook, except using deep comparison on the inputs, not
 reference equality</p>
