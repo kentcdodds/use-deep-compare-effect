@@ -1,5 +1,5 @@
 import React from 'react'
-import deepEqual from 'fast-deep-equal'
+import deepEqual from 'dequal'
 
 function checkDeps(deps) {
   if (!deps || !deps.length) {
