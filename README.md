@@ -137,14 +137,6 @@ function Query({query, variables}) {
 }
 ```
 
-## Inspiration
-
-I built this as part of a demonstration in my course on egghead.io:
-[Simplify React Apps with React Hooks](https://egghead.io/courses/simplify-react-apps-with-react-hooks).
-It was iterated on in the comments of
-[this video](https://egghead.io/lessons/react-deeply-compare-inputs-in-a-custom-react-hook-for-useeffect)
-and I packaged it up so people wouldn't have to worry about it.
-
 ## Other Solutions
 
 I'm not aware of any, if you are please [make a pull request][prs] and add it
