@@ -1,5 +1,5 @@
 import {renderHook, cleanup} from 'react-hooks-testing-library'
-import useDeepCompareEffect from '../'
+import useDeepCompareEffect, {useDeepCompareEffectNoCheck} from '../'
 
 afterEach(cleanup)
 
@@ -22,6 +22,17 @@ test('useDeepCompareEffect throws an error if using it with an array of only pri
     `"useDeepCompareEffect should not be used with dependencies that are all primitive values. Use React.useEffect instead."`,
   )
   expect(console.error).toHaveBeenCalledTimes(2)
+  console.error.mockRestore()
+})
+
+test("useDeepCompareEffectNoCheck don't throw an error if using it with an array of only primitive values", () => {
+  jest.spyOn(console, 'error').mockImplementation(() => {})
+  expect(() =>
+    renderHook(() =>
+      useDeepCompareEffectNoCheck(() => {}, [true, 1, 'string']),
+    ),
+  ).not.toThrow()
+  expect(console.error).toHaveBeenCalledTimes(0)
   console.error.mockRestore()
 })
 
