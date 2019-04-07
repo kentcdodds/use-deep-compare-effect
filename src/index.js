@@ -35,4 +35,8 @@ function useDeepCompareEffect(callback, dependencies) {
   React.useEffect(callback, useDeepCompareMemoize(dependencies))
 }
 
+export function useDeepCompareEffectNoCheck(callback, dependencies) {
+  React.useEffect(callback, useDeepCompareMemoize(dependencies))
+}
+
 export default useDeepCompareEffect

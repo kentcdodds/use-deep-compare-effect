@@ -88,7 +88,6 @@ This is a drop-in replacement for `React.useEffect` for this use-case only.
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Inspiration](#inspiration)
 - [Other Solutions](#other-solutions)
 - [Contributors](#contributors)
 - [LICENSE](#license)
@@ -109,7 +108,10 @@ npm install --save use-deep-compare-effect
 You use it in place of `React.useEffect`.
 
 > NOTE: Only use this if your values are objects or arrays that contain objects.
-> Otherwise you should just use `React.useEffect`.
+> Otherwise you should just use `React.useEffect`. In case of "polymorphic"
+> values (eg: sometimes object, sometimes a boolean), use
+> `useDeepCompareEffectNoCheck`, but do it at your own risk, as maybe there can
+> be better approaches to the problem.
 
 Example:
 
