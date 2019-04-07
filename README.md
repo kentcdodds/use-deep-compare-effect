@@ -13,7 +13,7 @@ reference equality</p>
 [![version][version-badge]][package] [![downloads][downloads-badge]][npmtrends]
 [![MIT License][license-badge]][license]
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome][prs-badge]][prs] [![Code of Conduct][coc-badge]][coc]
 
 [![Watch on GitHub][github-watch-badge]][github-watch]
@@ -150,8 +150,7 @@ Thanks goes to these people ([emoji key][emojis]):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars.githubusercontent.com/u/1500684?v=3" width="100px;" alt="Kent C. Dodds"/><br /><sub><b>Kent C. Dodds</b></sub>](https://kentcdodds.com)<br />[💻](https://github.com/kentcdodds/use-deep-compare-effect/commits?author=kentcdodds "Code") [📖](https://github.com/kentcdodds/use-deep-compare-effect/commits?author=kentcdodds "Documentation") [🚇](#infra-kentcdodds "Infrastructure (Hosting, Build-Tools, etc)") [⚠️](https://github.com/kentcdodds/use-deep-compare-effect/commits?author=kentcdodds "Tests") |
-| :---: |
+<table><tr><td align="center"><a href="https://kentcdodds.com"><img src="https://avatars.githubusercontent.com/u/1500684?v=3" width="100px;" alt="Kent C. Dodds"/><br /><sub><b>Kent C. Dodds</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=kentcdodds" title="Code">💻</a> <a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=kentcdodds" title="Documentation">📖</a> <a href="#infra-kentcdodds" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=kentcdodds" title="Tests">⚠️</a></td><td align="center"><a href="https://linkedin.com/in/edygar/en"><img src="https://avatars2.githubusercontent.com/u/566280?v=4" width="100px;" alt="Edygar de Lima Oliveira"/><br /><sub><b>Edygar de Lima Oliveira</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=edygar" title="Code">💻</a> <a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=edygar" title="Tests">⚠️</a></td></tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 

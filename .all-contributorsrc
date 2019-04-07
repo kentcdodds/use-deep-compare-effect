@@ -18,6 +18,19 @@
         "infra",
         "test"
       ]
+    },
+    {
+      "login": "edygar",
+      "name": "Edygar de Lima Oliveira",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/566280?v=4",
+      "profile": "https://linkedin.com/in/edygar/en",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
-  ]
+  ],
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "contributorsPerLine": 7
 }
