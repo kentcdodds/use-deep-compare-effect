@@ -7,7 +7,7 @@
 <div align="center">
 <h1>use-deep-compare-effect 🐋</h1>
 
-<p>It's react's useEffect hook, except using deep comparison on the inputs, not
+<p>It's React's useEffect hook, except using deep comparison on the inputs, not
 reference equality</p>
 
 </div>
@@ -30,12 +30,13 @@ reference equality</p>
 > `React.useEffect`. There's often a better way to do what you're trying to do
 > than do a deep comparison.
 
-## The problem
+## The Problem
 
-React's built-in `useEffect` hook has a second argument called the "dependencies
-array" and it allows you to optimize when React will call your effect callback.
-React will do a comparison between each of the values (via `Object.is`) to
-determine whether your effect callback should be called.
+React's built-in [`useEffect`][react-hooks] hook has a second argument called
+the "dependencies array" and it allows you to optimize when React will call your
+effect callback. React will do a comparison between each of the values (via
+[`Object.is`][object-is]) to determine whether your effect callback should be
+called.
 
 The problem is that if you need to provide an object for one of those
 dependencies and that object is new every render, then even if none of the
@@ -80,7 +81,7 @@ function QueryPageThing({username}) {
 
 If that `<Query />` component uses
 
-## This solution
+## This Solution
 
 This is a drop-in replacement for `React.useEffect` for this use-case only.
 
@@ -194,6 +195,9 @@ MIT
 [prs-badge]:
   https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
+[react-hooks]: https://reactjs.org/docs/hooks-effect.html
+[object-is]:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
 [donate-badge]:
   https://img.shields.io/badge/$-support-green.svg?style=flat-square
 [coc-badge]:
