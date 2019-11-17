@@ -9,7 +9,6 @@
     "npm": "> 3"
   },
   "scripts": {
-    "add-contributor": "kcd-scripts contributors add",
     "build": "kcd-scripts build --bundle",
     "lint": "kcd-scripts lint",
     "test": "kcd-scripts test",
@@ -24,18 +23,19 @@
   "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kentcdodds.com/)",
   "license": "MIT",
   "peerDependencies": {
-    "react": ">=16.8"
+    "react": ">=16.12"
   },
   "dependencies": {
-    "@babel/runtime": "^7.2.0",
+    "@babel/runtime": "^7.7.2",
+    "@testing-library/react-hooks": "^3.2.1",
     "dequal": "^1.0.0"
   },
   "devDependencies": {
     "jest-in-case": "^1.0.2",
-    "kcd-scripts": "^0.49.0",
+    "kcd-scripts": "^1.11.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-hooks-testing-library": "^0.3.6"
+    "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.12.0"
   },
   "husky": {
     "hooks": {

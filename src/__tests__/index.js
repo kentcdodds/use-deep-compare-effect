@@ -1,28 +1,20 @@
-import {renderHook, cleanup} from 'react-hooks-testing-library'
+import {renderHook} from '@testing-library/react-hooks'
 import useDeepCompareEffect, {useDeepCompareEffectNoCheck} from '../'
 
-afterEach(cleanup)
-
 test('useDeepCompareEffect throws an error if using it with an empty array', () => {
-  jest.spyOn(console, 'error').mockImplementation(() => {})
-  expect(() =>
-    renderHook(() => useDeepCompareEffect(() => {}, [])),
-  ).toThrowErrorMatchingInlineSnapshot(
-    `"useDeepCompareEffect should not be used with no dependencies. Use React.useEffect instead."`,
+  const {result} = renderHook(() => useDeepCompareEffect(() => {}, []))
+  expect(result.error).toMatchInlineSnapshot(
+    `[Error: useDeepCompareEffect should not be used with no dependencies. Use React.useEffect instead.]`,
   )
-  expect(console.error).toHaveBeenCalledTimes(2)
-  console.error.mockRestore()
 })
 
 test('useDeepCompareEffect throws an error if using it with an array of only primitive values', () => {
-  jest.spyOn(console, 'error').mockImplementation(() => {})
-  expect(() =>
-    renderHook(() => useDeepCompareEffect(() => {}, [true, 1, 'string'])),
-  ).toThrowErrorMatchingInlineSnapshot(
-    `"useDeepCompareEffect should not be used with dependencies that are all primitive values. Use React.useEffect instead."`,
+  const {result} = renderHook(() =>
+    useDeepCompareEffect(() => {}, [true, 1, 'string']),
   )
-  expect(console.error).toHaveBeenCalledTimes(2)
-  console.error.mockRestore()
+  expect(result.error).toMatchInlineSnapshot(
+    `[Error: useDeepCompareEffect should not be used with dependencies that are all primitive values. Use React.useEffect instead.]`,
+  )
 })
 
 test("useDeepCompareEffectNoCheck don't throw an error if using it with an array of only primitive values", () => {
