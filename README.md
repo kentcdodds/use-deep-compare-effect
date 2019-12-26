@@ -148,8 +148,7 @@ function Query({query, variables}) {
 
 ## Other Solutions
 
-I'm not aware of any, if you are please [make a pull request][prs] and add it
-here!
+[use-custom-compare-effect](https://github.com/sanjagh/use-custom-compare-effect)
 
 ## Contributors
 
