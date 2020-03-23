@@ -3,22 +3,23 @@
 
 <p>It's React's useEffect hook, except using deep comparison on the inputs, not
 reference equality</p>
-
 </div>
 
-<hr />
+---
 
+<!-- prettier-ignore-start -->
 [![Build Status][build-badge]][build]
 [![Code Coverage][coverage-badge]][coverage]
-[![version][version-badge]][package] [![downloads][downloads-badge]][npmtrends]
+[![version][version-badge]][package]
+[![downloads][downloads-badge]][npmtrends]
 [![MIT License][license-badge]][license]
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
-[![PRs Welcome][prs-badge]][prs] [![Code of Conduct][coc-badge]][coc]
-
-[![Watch on GitHub][github-watch-badge]][github-watch]
-[![Star on GitHub][github-star-badge]][github-star]
-[![Tweet][twitter-badge]][twitter]
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+[![PRs Welcome][prs-badge]][prs]
+[![Code of Conduct][coc-badge]][coc]
+<!-- prettier-ignore-end -->
 
 > WARNING: Please _only_ use this if you really can't find a way to use
 > `React.useEffect`. There's often a better way to do what you're trying to do
@@ -90,7 +91,10 @@ This is a drop-in replacement for `React.useEffect` for this use-case only.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Other Solutions](#other-solutions)
-- [Contributors](#contributors)
+- [Issues](#issues)
+  - [🐛 Bugs](#-bugs)
+  - [💡 Feature Requests](#-feature-requests)
+- [Contributors ✨](#contributors-)
 - [LICENSE](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -144,12 +148,31 @@ function Query({query, variables}) {
 
 [use-custom-compare-effect](https://github.com/sanjagh/use-custom-compare-effect)
 
-## Contributors
+## Issues
+
+_Looking to contribute? Look for the [Good First Issue][good-first-issue]
+label._
+
+### 🐛 Bugs
+
+Please file an issue for bugs, missing documentation, or unexpected behavior.
+
+[**See Bugs**][bugs]
+
+### 💡 Feature Requests
+
+Please file an issue to suggest new features. Vote on feature requests by adding
+a 👍. This helps maintainers prioritize what to work on.
+
+[**See Feature Requests**][requests]
+
+## Contributors ✨
 
 Thanks goes to these people ([emoji key][emojis]):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 <table>
   <tr>
     <td align="center"><a href="https://kentcdodds.com"><img src="https://avatars.githubusercontent.com/u/1500684?v=3" width="100px;" alt="Kent C. Dodds"/><br /><sub><b>Kent C. Dodds</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=kentcdodds" title="Code">💻</a> <a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=kentcdodds" title="Documentation">📖</a> <a href="#infra-kentcdodds" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=kentcdodds" title="Tests">⚠️</a></td>
@@ -158,6 +181,9 @@ Thanks goes to these people ([emoji key][emojis]):
     <td align="center"><a href="https://antonhalim.com"><img src="https://avatars1.githubusercontent.com/u/10498035?v=4" width="100px;" alt="Anton Halim"/><br /><sub><b>Anton Halim</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=antonhalim" title="Documentation">📖</a></td>
   </tr>
 </table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
@@ -168,45 +194,26 @@ Contributions of any kind welcome!
 
 MIT
 
-[npm]: https://www.npmjs.com/
+<!-- prettier-ignore-start -->
+[npm]: https://www.npmjs.com
 [node]: https://nodejs.org
-[build-badge]:
-  https://img.shields.io/travis/kentcdodds/use-deep-compare-effect.svg?style=flat-square
+[build-badge]: https://img.shields.io/travis/kentcdodds/use-deep-compare-effect.svg?style=flat-square
 [build]: https://travis-ci.org/kentcdodds/use-deep-compare-effect
-[coverage-badge]:
-  https://img.shields.io/codecov/c/github/kentcdodds/use-deep-compare-effect.svg?style=flat-square
+[coverage-badge]: https://img.shields.io/codecov/c/github/kentcdodds/use-deep-compare-effect.svg?style=flat-square
 [coverage]: https://codecov.io/github/kentcdodds/use-deep-compare-effect
-[version-badge]:
-  https://img.shields.io/npm/v/use-deep-compare-effect.svg?style=flat-square
+[version-badge]: https://img.shields.io/npm/v/use-deep-compare-effect.svg?style=flat-square
 [package]: https://www.npmjs.com/package/use-deep-compare-effect
-[downloads-badge]:
-  https://img.shields.io/npm/dm/use-deep-compare-effect.svg?style=flat-square
+[downloads-badge]: https://img.shields.io/npm/dm/use-deep-compare-effect.svg?style=flat-square
 [npmtrends]: http://www.npmtrends.com/use-deep-compare-effect
-[license-badge]:
-  https://img.shields.io/npm/l/use-deep-compare-effect.svg?style=flat-square
-[license]:
-  https://github.com/kentcdodds/use-deep-compare-effect/blob/master/LICENSE
-[prs-badge]:
-  https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+[license-badge]: https://img.shields.io/npm/l/use-deep-compare-effect.svg?style=flat-square
+[license]: https://github.com/kentcdodds/use-deep-compare-effect/blob/master/LICENSE
+[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
+[coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
+[coc]: https://github.com/kentcdodds/use-deep-compare-effect/blob/master/other/CODE_OF_CONDUCT.md
+[emojis]: https://github.com/all-contributors/all-contributors#emoji-key
+[all-contributors]: https://github.com/all-contributors/all-contributors
+
+[object-is]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
 [react-hooks]: https://reactjs.org/docs/hooks-effect.html
-[object-is]:
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
-[donate-badge]:
-  https://img.shields.io/badge/$-support-green.svg?style=flat-square
-[coc-badge]:
-  https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
-[coc]:
-  https://github.com/kentcdodds/use-deep-compare-effect/blob/master/other/CODE_OF_CONDUCT.md
-[github-watch-badge]:
-  https://img.shields.io/github/watchers/kentcdodds/use-deep-compare-effect.svg?style=social
-[github-watch]: https://github.com/kentcdodds/use-deep-compare-effect/watchers
-[github-star-badge]:
-  https://img.shields.io/github/stars/kentcdodds/use-deep-compare-effect.svg?style=social
-[github-star]: https://github.com/kentcdodds/use-deep-compare-effect/stargazers
-[twitter]:
-  https://twitter.com/intent/tweet?text=Check%20out%20use-deep-compare-effect%20by%20%40kentcdodds%20https%3A%2F%2Fgithub.com%2Fkentcdodds%2Fuse-deep-compare-effect%20%F0%9F%91%8D
-[twitter-badge]:
-  https://img.shields.io/twitter/url/https/github.com/kentcdodds/use-deep-compare-effect.svg?style=social
-[emojis]: https://github.com/kentcdodds/all-contributors#emoji-key
-[all-contributors]: https://github.com/kentcdodds/all-contributors
+<!-- prettier-ignore-end -->
