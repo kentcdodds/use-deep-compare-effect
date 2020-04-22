@@ -15,7 +15,7 @@ function checkDeps(deps) {
 }
 
 function isPrimitive(val) {
-  return val == null || /^[sbn]/.test(typeof val)
+  return /^[sbn]/.test(typeof val)
 }
 
 function useDeepCompareMemoize(value) {
