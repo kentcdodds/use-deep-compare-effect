@@ -192,7 +192,7 @@ Contributions of any kind welcome!
 
 ## LICENSE
 
-MIT
+[MIT][license]
 
 <!-- prettier-ignore-start -->
 [npm]: https://www.npmjs.com
@@ -211,9 +211,11 @@ MIT
 [prs]: http://makeapullrequest.com
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
 [coc]: https://github.com/kentcdodds/use-deep-compare-effect/blob/master/other/CODE_OF_CONDUCT.md
+[bugs]: https://github.com/kentcdodds/use-deep-compare-effect/issues?q=is%3Aissue+is%3Aopen+label%3Abug+sort%3Acreated-desc+
+[requests]: https://github.com/kentcdodds/use-deep-compare-effect/issues?q=is%3Aissue+label%3Aenhancement+sort%3Areactions-%2B1-desc
 [emojis]: https://github.com/all-contributors/all-contributors#emoji-key
 [all-contributors]: https://github.com/all-contributors/all-contributors
-
 [object-is]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
 [react-hooks]: https://reactjs.org/docs/hooks-effect.html
+[license]: https://github.com/kentcdodds/use-deep-compare-effect/blob/master/LICENSE
 <!-- prettier-ignore-end -->
