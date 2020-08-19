@@ -23,17 +23,17 @@
   "author": "Kent C. Dodds <me@kentcdodds.com> (https://kentcdodds.com)",
   "license": "MIT",
   "peerDependencies": {
-    "react": ">=16.12"
+    "react": ">=16.13"
   },
   "dependencies": {
-    "@babel/runtime": "^7.9.2",
+    "@babel/runtime": "^7.11.2",
     "@types/use-deep-compare-effect": "^1.2.0",
-    "dequal": "^1.0.0"
+    "dequal": "^2.0.2"
   },
   "devDependencies": {
-    "@testing-library/react-hooks": "^3.2.1",
+    "@testing-library/react-hooks": "^3.4.1",
     "jest-in-case": "^1.0.2",
-    "kcd-scripts": "^5.6.0",
+    "kcd-scripts": "^6.2.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1"

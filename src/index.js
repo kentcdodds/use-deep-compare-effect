@@ -1,5 +1,5 @@
 import React from 'react'
-import deepEqual from 'dequal'
+import {dequal as deepEqual} from 'dequal'
 
 function checkDeps(deps) {
   if (!deps || !deps.length) {
@@ -32,10 +32,12 @@ function useDeepCompareEffect(callback, dependencies) {
   if (process.env.NODE_ENV !== 'production') {
     checkDeps(dependencies)
   }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useEffect(callback, useDeepCompareMemoize(dependencies))
 }
 
 export function useDeepCompareEffectNoCheck(callback, dependencies) {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useEffect(callback, useDeepCompareMemoize(dependencies))
 }
 
