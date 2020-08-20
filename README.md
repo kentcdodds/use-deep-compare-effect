@@ -23,7 +23,7 @@ reference equality</p>
 
 > WARNING: Please _only_ use this if you really can't find a way to use
 > `React.useEffect`. There's often a better way to do what you're trying to do
-> than do a deep comparison.
+> than a deep comparison.
 
 ## The Problem
 
@@ -74,8 +74,6 @@ function QueryPageThing({username}) {
 > don't have control on what kinds of things people are passing you (or you want
 > to give them a nice ergonomic API that can handle new objects every render).
 
-If that `<Query />` component uses
-
 ## This Solution
 
 This is a drop-in replacement for `React.useEffect` for this use-case only.
@@ -102,9 +100,9 @@ This is a drop-in replacement for `React.useEffect` for this use-case only.
 ## Installation
 
 This module is distributed via [npm][npm] which is bundled with [node][node] and
-should be installed as one of your project's `dependencies`:
+should be installed as one of your project's dependencies:
 
-```
+```shell
 npm install --save use-deep-compare-effect
 ```
 
@@ -113,7 +111,7 @@ npm install --save use-deep-compare-effect
 You use it in place of `React.useEffect`.
 
 > NOTE: Only use this if your values are objects or arrays that contain objects.
-> Otherwise you should just use `React.useEffect`. In case of "polymorphic"
+> Otherwise, you should just use `React.useEffect`. In case of "polymorphic"
 > values (eg: sometimes object, sometimes a boolean), use
 > `useDeepCompareEffectNoCheck`, but do it at your own risk, as maybe there can
 > be better approaches to the problem.
@@ -212,6 +210,7 @@ Contributions of any kind welcome!
 [prs]: http://makeapullrequest.com
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
 [coc]: https://github.com/kentcdodds/use-deep-compare-effect/blob/master/other/CODE_OF_CONDUCT.md
+[good-first-issue]: https://github.com/kentcdodds/use-deep-compare-effect/issues?utf8=✓&q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3A"good+first+issue"+
 [bugs]: https://github.com/kentcdodds/use-deep-compare-effect/issues?q=is%3Aissue+is%3Aopen+label%3Abug+sort%3Acreated-desc+
 [requests]: https://github.com/kentcdodds/use-deep-compare-effect/issues?q=is%3Aissue+label%3Aenhancement+sort%3Areactions-%2B1-desc
 [emojis]: https://github.com/all-contributors/all-contributors#emoji-key
