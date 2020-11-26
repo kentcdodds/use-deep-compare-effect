@@ -25,7 +25,8 @@ test("useDeepCompareEffectNoCheck don't throw an error if using it with an array
     ),
   ).not.toThrow()
   expect(console.error).toHaveBeenCalledTimes(0)
-  console.error.mockRestore()
+  // @ts-expect-error no idea
+  console.error.mockRestore() // eslint-disable-line
 })
 
 test('in production mode there are no errors thrown', () => {
@@ -96,7 +97,7 @@ test('useDeepCompareEffect does NOT work with manipulation', () => {
 
 test('useDeepCompareEffect works with deep object similarities/differences', () => {
   const callback = jest.fn()
-  let deps = [{a: {b: {c: 'd'}}}]
+  let deps: Array<Record<string, unknown>> = [{a: {b: {c: 'd'}}}]
   const {rerender} = renderHook(() => useDeepCompareEffect(callback, deps))
   expect(callback).toHaveBeenCalledTimes(1)
   callback.mockClear()
