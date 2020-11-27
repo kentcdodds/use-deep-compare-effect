@@ -13,10 +13,7 @@ reference equality</p>
 [![version][version-badge]][package]
 [![downloads][downloads-badge]][npmtrends]
 [![MIT License][license-badge]][license]
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+[![All Contributors][all-contributors-badge]](#contributors-)
 [![PRs Welcome][prs-badge]][prs]
 [![Code of Conduct][coc-badge]][coc]
 <!-- prettier-ignore-end -->
@@ -36,50 +33,6 @@ called.
 The problem is that if you need to provide an object for one of those
 dependencies and that object is new every render, then even if none of the
 properties changed, your effect will get called anyway.
-
-Here's an example situation:
-
-```jsx
-function Query({query, variables}) {
-  // some code...
-
-  React.useEffect(
-    () => {},
-    // because of the way the Query component is used below, `variables` is a
-    // new object every render. This is the problem.
-    [query, variables],
-  )
-
-  return <div>{/* awesome UI here */}</div>
-}
-
-function QueryPageThing({username}) {
-  const query = `
-    query getUserData($username: String!) {
-      user(login: $username) {
-        name
-      }
-    }
-  `
-  const variables = {username}
-  // poof! Every render `variables` will be a new object!
-  return <Query query={query} variables={variables} />
-}
-```
-
-> NOTE: you could also solve this problem if the `QueryPageThing` created the
-> variables object like this:
-> `const variables = React.useMemo(() => ({username}), [username])`. Then you
-> wouldn't need this package. But sometimes you're writing a custom hook and you
-> don't have control on what kinds of things people are passing you (or you want
-> to give them a nice ergonomic API that can handle new objects every render).
-
-## This Solution
-
-This is a drop-in replacement for `React.useEffect` for this use-case only.
-
-> Note, if you try to use `useDeepCompareEffect` with only primitive values, you
-> will receive an error because you should use `React.useEffect` instead.
 
 ## Table of Contents
 
@@ -184,6 +137,7 @@ Thanks goes to these people ([emoji key][emojis]):
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors][all-contributors] specification.
@@ -191,13 +145,13 @@ Contributions of any kind welcome!
 
 ## LICENSE
 
-[MIT][license]
+MIT
 
 <!-- prettier-ignore-start -->
 [npm]: https://www.npmjs.com
 [node]: https://nodejs.org
-[build-badge]: https://img.shields.io/travis/kentcdodds/use-deep-compare-effect.svg?style=flat-square
-[build]: https://travis-ci.org/kentcdodds/use-deep-compare-effect
+[build-badge]: https://img.shields.io/github/workflow/status/kentcdodds/use-deep-compare-effect/validate?logo=github&style=flat-square
+[build]: https://github.com/kentcdodds/use-deep-compare-effect/actions?query=workflow%3Avalidate
 [coverage-badge]: https://img.shields.io/codecov/c/github/kentcdodds/use-deep-compare-effect.svg?style=flat-square
 [coverage]: https://codecov.io/github/kentcdodds/use-deep-compare-effect
 [version-badge]: https://img.shields.io/npm/v/use-deep-compare-effect.svg?style=flat-square
@@ -205,17 +159,15 @@ Contributions of any kind welcome!
 [downloads-badge]: https://img.shields.io/npm/dm/use-deep-compare-effect.svg?style=flat-square
 [npmtrends]: http://www.npmtrends.com/use-deep-compare-effect
 [license-badge]: https://img.shields.io/npm/l/use-deep-compare-effect.svg?style=flat-square
-[license]: https://github.com/kentcdodds/use-deep-compare-effect/blob/master/LICENSE
+[license]: https://github.com/kentcdodds/use-deep-compare-effect/blob/main/LICENSE
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
-[coc]: https://github.com/kentcdodds/use-deep-compare-effect/blob/master/other/CODE_OF_CONDUCT.md
-[good-first-issue]: https://github.com/kentcdodds/use-deep-compare-effect/issues?utf8=✓&q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3A"good+first+issue"+
-[bugs]: https://github.com/kentcdodds/use-deep-compare-effect/issues?q=is%3Aissue+is%3Aopen+label%3Abug+sort%3Acreated-desc+
-[requests]: https://github.com/kentcdodds/use-deep-compare-effect/issues?q=is%3Aissue+label%3Aenhancement+sort%3Areactions-%2B1-desc
+[coc]: https://github.com/kentcdodds/use-deep-compare-effect/blob/main/CODE_OF_CONDUCT.md
 [emojis]: https://github.com/all-contributors/all-contributors#emoji-key
 [all-contributors]: https://github.com/all-contributors/all-contributors
-[object-is]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
-[react-hooks]: https://reactjs.org/docs/hooks-effect.html
-[license]: https://github.com/kentcdodds/use-deep-compare-effect/blob/master/LICENSE
+[all-contributors-badge]: https://img.shields.io/github/all-contributors/kentcdodds/use-deep-compare-effect?color=orange&style=flat-square
+[bugs]: https://github.com/kentcdodds/use-deep-compare-effect/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3Abug
+[requests]: https://github.com/kentcdodds/use-deep-compare-effect/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3Aenhancement
+[good-first-issue]: https://github.com/kentcdodds/use-deep-compare-effect/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3Aenhancement+label%3A%22good+first+issue%22
 <!-- prettier-ignore-end -->

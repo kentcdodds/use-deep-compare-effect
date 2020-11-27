@@ -18,14 +18,14 @@ test('useDeepCompareEffect throws an error if using it with an array of only pri
 })
 
 test("useDeepCompareEffectNoCheck don't throw an error if using it with an array of only primitive values", () => {
-  jest.spyOn(console, 'error').mockImplementation(() => {})
+  const errorMock = jest.spyOn(console, 'error').mockImplementation(() => {})
   expect(() =>
     renderHook(() =>
       useDeepCompareEffectNoCheck(() => {}, [true, 1, 'string']),
     ),
   ).not.toThrow()
   expect(console.error).toHaveBeenCalledTimes(0)
-  console.error.mockRestore()
+  errorMock.mockRestore()
 })
 
 test('in production mode there are no errors thrown', () => {
@@ -96,7 +96,7 @@ test('useDeepCompareEffect does NOT work with manipulation', () => {
 
 test('useDeepCompareEffect works with deep object similarities/differences', () => {
   const callback = jest.fn()
-  let deps = [{a: {b: {c: 'd'}}}]
+  let deps: Array<Record<string, unknown>> = [{a: {b: {c: 'd'}}}]
   const {rerender} = renderHook(() => useDeepCompareEffect(callback, deps))
   expect(callback).toHaveBeenCalledTimes(1)
   callback.mockClear()

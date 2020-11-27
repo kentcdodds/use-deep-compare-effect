@@ -1,7 +1,14 @@
-import React from 'react'
+import * as React from 'react'
 import {dequal as deepEqual} from 'dequal'
 
-function checkDeps(deps) {
+type UseEffectParams = Parameters<typeof React.useEffect>
+type EffectCallback = UseEffectParams[0]
+type DependencyList = UseEffectParams[1]
+// yes, I know it's void, but I like what this communicates about
+// the intent of these functions: It's just like useEffect
+type UseEffectReturn = ReturnType<typeof React.useEffect>
+
+function checkDeps(deps: DependencyList) {
   if (!deps || !deps.length) {
     throw new Error(
       'useDeepCompareEffect should not be used with no dependencies. Use React.useEffect instead.',
@@ -14,12 +21,12 @@ function checkDeps(deps) {
   }
 }
 
-function isPrimitive(val) {
+function isPrimitive(val: unknown) {
   return val == null || /^[sbn]/.test(typeof val)
 }
 
-function useDeepCompareMemoize(value) {
-  const ref = React.useRef()
+function useDeepCompareMemoize(value: DependencyList) {
+  const ref = React.useRef<DependencyList>()
 
   if (!deepEqual(value, ref.current)) {
     ref.current = value
@@ -28,7 +35,10 @@ function useDeepCompareMemoize(value) {
   return ref.current
 }
 
-function useDeepCompareEffect(callback, dependencies) {
+function useDeepCompareEffect(
+  callback: EffectCallback,
+  dependencies: DependencyList,
+): UseEffectReturn {
   if (process.env.NODE_ENV !== 'production') {
     checkDeps(dependencies)
   }
@@ -36,7 +46,10 @@ function useDeepCompareEffect(callback, dependencies) {
   React.useEffect(callback, useDeepCompareMemoize(dependencies))
 }
 
-export function useDeepCompareEffectNoCheck(callback, dependencies) {
+export function useDeepCompareEffectNoCheck(
+  callback: EffectCallback,
+  dependencies: DependencyList,
+): UseEffectReturn {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useEffect(callback, useDeepCompareMemoize(dependencies))
 }
