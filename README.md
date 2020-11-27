@@ -141,6 +141,7 @@ Thanks goes to these people ([emoji key][emojis]):
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors][all-contributors] specification.
@@ -162,11 +163,11 @@ MIT
 [downloads-badge]: https://img.shields.io/npm/dm/use-deep-compare-effect.svg?style=flat-square
 [npmtrends]: http://www.npmtrends.com/use-deep-compare-effect
 [license-badge]: https://img.shields.io/npm/l/use-deep-compare-effect.svg?style=flat-square
-[license]: https://github.com/kentcdodds/use-deep-compare-effect/blob/main/LICENSE
+[license]: https://github.com/kentcdodds/use-deep-compare-effect/blob/master/LICENSE
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
-[coc]: https://github.com/kentcdodds/use-deep-compare-effect/blob/main/CODE_OF_CONDUCT.md
+[coc]: https://github.com/kentcdodds/use-deep-compare-effect/blob/master/CODE_OF_CONDUCT.md
 [emojis]: https://github.com/all-contributors/all-contributors#emoji-key
 [all-contributors]: https://github.com/all-contributors/all-contributors
 [all-contributors-badge]: https://img.shields.io/github/all-contributors/kentcdodds/use-deep-compare-effect?color=orange&style=flat-square
