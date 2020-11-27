@@ -132,12 +132,12 @@ Thanks goes to these people ([emoji key][emojis]):
     <td align="center"><a href="https://antonhalim.com"><img src="https://avatars1.githubusercontent.com/u/10498035?v=4" width="100px;" alt=""/><br /><sub><b>Anton Halim</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=antonhalim" title="Documentation">📖</a></td>
     <td align="center"><a href="https://michaeldeboey.be"><img src="https://avatars3.githubusercontent.com/u/6643991?v=4" width="100px;" alt=""/><br /><sub><b>Michaël De Boey</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=MichaelDeBoey" title="Code">💻</a></td>
     <td align="center"><a href="http://linkedin.com/in/tbueschel"><img src="https://avatars3.githubusercontent.com/u/13087421?v=4" width="100px;" alt=""/><br /><sub><b>Tobias Büschel</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=tobiasbueschel" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://peter.hozak.info/"><img src="https://avatars0.githubusercontent.com/u/1087670?v=4" width="100px;" alt=""/><br /><sub><b>Peter Hozák</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/pulls?q=is%3Apr+reviewed-by%3AAprillion" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors][all-contributors] specification.
