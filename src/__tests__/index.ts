@@ -18,15 +18,14 @@ test('useDeepCompareEffect throws an error if using it with an array of only pri
 })
 
 test("useDeepCompareEffectNoCheck don't throw an error if using it with an array of only primitive values", () => {
-  jest.spyOn(console, 'error').mockImplementation(() => {})
+  const errorMock = jest.spyOn(console, 'error').mockImplementation(() => {})
   expect(() =>
     renderHook(() =>
       useDeepCompareEffectNoCheck(() => {}, [true, 1, 'string']),
     ),
   ).not.toThrow()
   expect(console.error).toHaveBeenCalledTimes(0)
-  // @ts-expect-error no idea
-  console.error.mockRestore() // eslint-disable-line
+  errorMock.mockRestore()
 })
 
 test('in production mode there are no errors thrown', () => {
