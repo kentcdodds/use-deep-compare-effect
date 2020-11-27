@@ -43,7 +43,7 @@ function useDeepCompareEffect(
     checkDeps(dependencies)
   }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  React.useEffect(callback, useDeepCompareMemoize(dependencies))
+  return React.useEffect(callback, useDeepCompareMemoize(dependencies))
 }
 
 export function useDeepCompareEffectNoCheck(
@@ -51,7 +51,7 @@ export function useDeepCompareEffectNoCheck(
   dependencies: DependencyList,
 ): UseEffectReturn {
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  React.useEffect(callback, useDeepCompareMemoize(dependencies))
+  return React.useEffect(callback, useDeepCompareMemoize(dependencies))
 }
 
 export default useDeepCompareEffect
