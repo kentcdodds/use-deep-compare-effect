@@ -136,12 +136,12 @@ Thanks goes to these people ([emoji key][emojis]):
   </tr>
   <tr>
     <td align="center"><a href="https://ricardobusquet.com"><img src="https://avatars1.githubusercontent.com/u/7198302?v=4" width="100px;" alt=""/><br /><sub><b>Ricardo Busquet</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/pulls?q=is%3Apr+reviewed-by%3Arbusquet" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/daveisfera"><img src="https://avatars3.githubusercontent.com/u/1686193?v=4" width="100px;" alt=""/><br /><sub><b>Dave Johansen</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/issues?q=author%3Adaveisfera" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors][all-contributors] specification.
