@@ -86,6 +86,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "daveisfera",
+      "name": "Dave Johansen",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1686193?v=4",
+      "profile": "https://github.com/daveisfera",
+      "contributions": [
+        "bug"
+      ]
     }
   ]
 }
