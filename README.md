@@ -174,4 +174,6 @@ MIT
 [bugs]: https://github.com/kentcdodds/use-deep-compare-effect/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3Abug
 [requests]: https://github.com/kentcdodds/use-deep-compare-effect/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3Aenhancement
 [good-first-issue]: https://github.com/kentcdodds/use-deep-compare-effect/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3Aenhancement+label%3A%22good+first+issue%22
+[react-hooks]: https://reactjs.org/docs/hooks-effect.html
+[object-is]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
 <!-- prettier-ignore-end -->
