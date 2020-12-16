@@ -95,6 +95,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "samuel-knutson",
+      "name": "Sam Knutson",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/2458585?v=4",
+      "profile": "https://github.com/samuel-knutson",
+      "contributions": [
+        "doc"
+      ]
     }
   ]
 }
