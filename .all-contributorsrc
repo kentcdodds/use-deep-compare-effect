@@ -104,6 +104,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "AlbertLucianto",
+      "name": "Albert Lucianto",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/23165866?v=4",
+      "profile": "https://albertlucianto.github.io",
+      "contributions": [
+        "bug"
+      ]
     }
   ]
 }
