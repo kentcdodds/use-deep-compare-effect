@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import {renderHook} from '@testing-library/react-hooks'
 import useDeepCompareEffect, {useDeepCompareEffectNoCheck} from '../'
 
@@ -116,6 +117,29 @@ test('useDeepCompareEffect works with deep object similarities/differences', () 
   // add property
   deps = [{a: {b: {c: 'e'}, f: 'g'}}]
   rerender()
+  expect(callback).toHaveBeenCalledTimes(1)
+  callback.mockClear()
+})
+
+test('useDeepCompareEffect works with getDerivedStateFromProps', () => {
+  const callback = jest.fn()
+  const {rerender} = renderHook(
+    ({a}: {a: number}) => {
+      const [lastA, setLastA] = useState(a)
+      const [c, setC] = useState(5)
+      if (lastA !== a) {
+        setLastA(a)
+        setC(1)
+      }
+      useDeepCompareEffect(callback, [{a, c}])
+    },
+    {initialProps: {a: 1}},
+  )
+  expect(callback).toHaveBeenCalledTimes(1)
+  callback.mockClear()
+
+  // change a, and reset c
+  rerender({a: 2})
   expect(callback).toHaveBeenCalledTimes(1)
   callback.mockClear()
 })

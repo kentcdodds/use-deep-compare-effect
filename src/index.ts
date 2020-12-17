@@ -27,14 +27,14 @@ function isPrimitive(val: unknown) {
 
 function useDeepCompareMemoize(value: DependencyList) {
   const ref = React.useRef<DependencyList>()
-  const signalRef = React.useRef<Boolean>(false)
+  const signalRef = React.useRef<number>(0)
 
   if (!deepEqual(value, ref.current)) {
     ref.current = value
-    signalRef.current = !signalRef.current                               
+    signalRef.current += 1
   }
 
-  return [signalRef.current] 
+  return [signalRef.current]
 }
 
 function useDeepCompareEffect(
