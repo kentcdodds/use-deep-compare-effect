@@ -70,8 +70,8 @@ You use it in place of `React.useEffect`.
 > be better approaches to the problem.
 
 > NOTE: Be careful when your dependency is an object which contains function.
-> Although none of the properties of the object has changed,
-> the effect callback will still be called every render.
+> If that function is defined on the object during a render, then it's changed
+> and the effect callback will be called every render.
 > [Issue](https://github.com/kentcdodds/use-deep-compare-effect/issues/47) has more context.
 
 Example:
