@@ -69,6 +69,11 @@ You use it in place of `React.useEffect`.
 > `useDeepCompareEffectNoCheck`, but do it at your own risk, as maybe there can
 > be better approaches to the problem.
 
+> NOTE: Be careful when your dependency is an object which contains function.
+> Although none of the properties of the object has changed,
+> the effect callback will still be called every render.
+> [Issue](https://github.com/kentcdodds/use-deep-compare-effect/issues/47) has more context.
+
 Example:
 
 ```jsx
