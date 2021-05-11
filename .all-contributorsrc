@@ -115,6 +115,15 @@
         "code",
         "test"
       ]
+    },
+    {
+      "login": "jasperck",
+      "name": "Jasper Chang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5002476?v=4",
+      "profile": "https://github.com/jasperck",
+      "contributions": [
+        "doc"
+      ]
     }
   ]
 }
