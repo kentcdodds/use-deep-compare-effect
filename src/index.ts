@@ -25,7 +25,7 @@ function isPrimitive(val: unknown) {
   return val == null || /^[sbn]/.test(typeof val)
 }
 
-function useDeepCompareMemoize(value: DependencyList) {
+export function useDeepCompareMemoize(value: DependencyList) {
   const ref = React.useRef<DependencyList>()
   const signalRef = React.useRef<number>(0)
 
