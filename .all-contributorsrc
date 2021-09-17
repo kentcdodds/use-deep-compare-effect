@@ -124,6 +124,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "cvolant",
+      "name": "cvolant",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37238472?v=4",
+      "profile": "https://github.com/cvolant",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
