@@ -25,8 +25,12 @@ function isPrimitive(val: unknown) {
   return val == null || /^[sbn]/.test(typeof val)
 }
 
-export function useDeepCompareMemoize(value: DependencyList) {
-  const ref = React.useRef<DependencyList>()
+/**
+ * @param value the value to be memoized (usually a dependency list)
+ * @returns a momoized version of the value as long as it remains deeply equal
+ */
+export function useDeepCompareMemoize<T>(value: T) {
+  const ref = React.useRef<T>(value)
   const signalRef = React.useRef<number>(0)
 
   if (!deepEqual(value, ref.current)) {
@@ -34,7 +38,8 @@ export function useDeepCompareMemoize(value: DependencyList) {
     signalRef.current += 1
   }
 
-  return [signalRef.current]
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  return React.useMemo(() => ref.current, [signalRef.current])
 }
 
 function useDeepCompareEffect(
