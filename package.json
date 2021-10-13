@@ -29,11 +29,11 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
-    "@types/react": "^17.0.0",
     "dequal": "^2.0.2"
   },
   "devDependencies": {
     "@testing-library/react-hooks": "^3.4.2",
+    "@types/react": "^17.0.0",
     "jest-in-case": "^1.0.2",
     "kcd-scripts": "^7.2.1",
     "react": "^17.0.1",
