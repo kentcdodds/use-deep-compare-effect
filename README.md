@@ -148,6 +148,9 @@ Thanks goes to these people ([emoji key][emojis]):
     <td align="center"><a href="https://github.com/cvolant"><img src="https://avatars.githubusercontent.com/u/37238472?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cvolant</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=cvolant" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/phwebi"><img src="https://avatars.githubusercontent.com/u/2031802?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Phoebe Gao</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=phwebi" title="Code">💻</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/ablakey"><img src="https://avatars.githubusercontent.com/u/9021944?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew Blakey</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=ablakey" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->

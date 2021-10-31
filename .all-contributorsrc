@@ -142,6 +142,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ablakey",
+      "name": "Andrew Blakey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9021944?v=4",
+      "profile": "https://github.com/ablakey",
+      "contributions": [
+        "doc"
+      ]
     }
   ]
 }
