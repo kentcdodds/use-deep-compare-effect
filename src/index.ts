@@ -27,7 +27,7 @@ function isPrimitive(val: unknown) {
 
 /**
  * @param value the value to be memoized (usually a dependency list)
- * @returns a momoized version of the value as long as it remains deeply equal
+ * @returns a memoized version of the value as long as it remains deeply equal
  */
 export function useDeepCompareMemoize<T>(value: T) {
   const ref = React.useRef<T>(value)
