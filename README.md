@@ -150,6 +150,7 @@ Thanks goes to these people ([emoji key][emojis]):
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/ablakey"><img src="https://avatars.githubusercontent.com/u/9021944?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew Blakey</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=ablakey" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/mkarots"><img src="https://avatars.githubusercontent.com/u/7574557?v=4?s=100" width="100px;" alt=""/><br /><sub><b>@mkarots</b></sub></a><br /><a href="https://github.com/kentcdodds/use-deep-compare-effect/commits?author=mkarots" title="Documentation">📖</a></td>
   </tr>
 </table>
 
