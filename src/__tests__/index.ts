@@ -39,7 +39,9 @@ test('in production mode there are no errors thrown', () => {
 
 test('useDeepCompareEffect handles changing values as expected', () => {
   const callback = jest.fn()
-  let deps = [1, {a: 'b'}, true]
+  const fn1 = () => {}
+  const fn2 = () => {}
+  let deps = [1, {a: 'b'}, true, fn1]
   const {rerender} = renderHook(() => useDeepCompareEffect(callback, deps))
 
   expect(callback).toHaveBeenCalledTimes(1)
@@ -51,13 +53,13 @@ test('useDeepCompareEffect handles changing values as expected', () => {
   callback.mockClear()
 
   // no-change (new object with same properties)
-  deps = [1, {a: 'b'}, true]
+  deps = [1, {a: 'b'}, true, fn1]
   rerender()
   expect(callback).toHaveBeenCalledTimes(0)
   callback.mockClear()
 
   // change (new primitive value)
-  deps = [2, {a: 'b'}, true]
+  deps = [2, {a: 'b'}, true, fn1]
   rerender()
   expect(callback).toHaveBeenCalledTimes(1)
   callback.mockClear()
@@ -68,13 +70,19 @@ test('useDeepCompareEffect handles changing values as expected', () => {
   callback.mockClear()
 
   // change (new primitive value)
-  deps = [1, {a: 'b'}, false]
+  deps = [1, {a: 'b'}, false, fn1]
   rerender()
   expect(callback).toHaveBeenCalledTimes(1)
   callback.mockClear()
 
   // change (new properties on object)
-  deps = [1, {a: 'c'}, false]
+  deps = [1, {a: 'c'}, false, fn1]
+  rerender()
+  expect(callback).toHaveBeenCalledTimes(1)
+  callback.mockClear()
+
+  // change (new function)
+  deps = [1, {a: 'c'}, false, fn2]
   rerender()
   expect(callback).toHaveBeenCalledTimes(1)
   callback.mockClear()
@@ -97,25 +105,33 @@ test('useDeepCompareEffect does NOT work with manipulation', () => {
 
 test('useDeepCompareEffect works with deep object similarities/differences', () => {
   const callback = jest.fn()
-  let deps: Array<Record<string, unknown>> = [{a: {b: {c: 'd'}}}]
+  const fn1 = () => {}
+  const fn2 = () => {}
+  let deps: Array<Record<string, unknown>> = [{a: {b: {c: 'd', fn1}}}]
   const {rerender} = renderHook(() => useDeepCompareEffect(callback, deps))
   expect(callback).toHaveBeenCalledTimes(1)
   callback.mockClear()
 
   // change primitive value
-  deps = [{a: {b: {c: 'e'}}}]
+  deps = [{a: {b: {c: 'e', fn1}}}]
   rerender()
   expect(callback).toHaveBeenCalledTimes(1)
   callback.mockClear()
 
   // no-change
-  deps = [{a: {b: {c: 'e'}}}]
+  deps = [{a: {b: {c: 'e', fn1}}}]
   rerender()
   expect(callback).toHaveBeenCalledTimes(0)
   callback.mockClear()
 
   // add property
-  deps = [{a: {b: {c: 'e'}, f: 'g'}}]
+  deps = [{a: {b: {c: 'e', fn1}, f: 'g'}}]
+  rerender()
+  expect(callback).toHaveBeenCalledTimes(1)
+  callback.mockClear()
+
+  // change function
+  deps = [{a: {b: {c: 'e', fn2}, f: 'g'}}]
   rerender()
   expect(callback).toHaveBeenCalledTimes(1)
   callback.mockClear()
