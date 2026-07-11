@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
-    "dequal": "^2.0.2"
+    "isoequal": "^1.0.0"
   },
   "devDependencies": {
     "@testing-library/react-hooks": "^3.4.2",
