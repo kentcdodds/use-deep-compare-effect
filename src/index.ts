@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {dequal as deepEqual} from 'dequal'
+import {isoEqual as deepEqual} from 'isoequal'
 
 type UseEffectParams = Parameters<typeof React.useEffect>
 type EffectCallback = UseEffectParams[0]
